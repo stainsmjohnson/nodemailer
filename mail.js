@@ -32,7 +32,7 @@ async function sendmail({ mail }) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "rclient007@gmail.com", // generated ethereal user
+      user: "nclient007@gmail.com", // generated ethereal user
       pass: "finalyearproject", // generated ethereal password
     },
     tls: {
