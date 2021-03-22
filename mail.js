@@ -32,8 +32,8 @@ async function sendmail({ mail }) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "grahamstains1999@gmail.com", // generated ethereal user
-      pass: "interNational", // generated ethereal password
+      user: "rclient007@gmail.com", // generated ethereal user
+      pass: "finalyearproject", // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false,
