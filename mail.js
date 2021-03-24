@@ -12,13 +12,15 @@ app.use(cors())
 
 app.post("/send", (req, res) => {
   const toaddress = req.body.to;
+  console.log('>>>>   toaddre' ,toaddress)
   sendmail({
     mail: toaddress,
   })
     .then(() => {
       res.json({ success: true });
     })
-    .catch(() => {
+    .catch((err) => {
+    console.log('sss ',err.message)
       res.json({ success: false });
     });
 });
@@ -28,6 +30,7 @@ app.listen(PORT, () => {
 });
 
 async function sendmail({ mail }) {
+    console.log('>>>>   sendmaul' ,mail)
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
