@@ -11,6 +11,7 @@ app.use(upload.array());
 app.use(cors())
 
 app.post("/send", (req, res) => {
+  console.log(req.body)
   const toaddress = req.body.to;
   console.log('>>>>   toaddre' ,toaddress)
   sendmail({
