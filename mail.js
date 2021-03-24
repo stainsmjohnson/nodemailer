@@ -1,12 +1,14 @@
 "use strict";
 const nodemailer = require("nodemailer");
 const express = require("express");
+const cors = require("cors")
 var multer = require("multer");
 var upload = multer();
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 app.use(upload.array());
+app.use(cors())
 
 app.post("/send", (req, res) => {
   const toaddress = req.body.to;
